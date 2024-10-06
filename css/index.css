@@ -15,7 +15,6 @@
     outline: none; border: none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: 2s linear;
 }
 
 html{
@@ -100,7 +99,8 @@ body{
 
 .header .search-form{
  position: absolute;
- top: 115%; right: 7%;
+ top: 115%; 
+ right: 7%;
  background: #fff;
  width: 50rem;
  height: 5rem;
@@ -194,29 +194,33 @@ body{
 
     .header{
         padding: 1.5rem 2rem;
+        background-color: green;
+        position: relative
     }
-}
 
-@media (max-width:911px){
-
-    #menu-btn{
+    #menu-btn {
         display: inline-block;
+        background-color: purple;
     }
 
-    .header .navbar{
+    .header .navbar {
         position: absolute;
-        top: 100%; right: -100%;
-        background: #fff;
-        background: 30rem;
+        background-color: yellow;
         width: 30rem;
-        height: calc(10vh - 9.5rem) ;
+        right: -500px;
+        top: 80px;
+        transition: all 0.5s ease-in;
     }
 
-    .header .navbar .active{
-        right: 0%;
+    .header .navbar.active {
+        position: absolute;
+        background-color: pink;
+        right: 0;
+        top: 80px;
+        transition: all 0.5s ease-in;
     }
-   
-    .header .navbar a{
+
+    .header .navbar a {
         color: var(--black);
         display: block;
         margin: 1.5rem;
